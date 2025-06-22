@@ -1,0 +1,73 @@
+1: Understand Search Algorithms
+When we’re building a library management system, users should be able to search for books — for example,
+by title or author. To do this, we need search algorithms, which are step-by-step methods for finding specific data.
+
+Understanding of two basic search algorithms:
+
+Linear Search:
+This is the simplest method.
+
+We go through the list one book at a time and check if it matches the title we're searching for.
+
+It works on any list, sorted or not.
+
+But it's slow if the list is long, because in the worst case, we may have to check every single book.
+
+Example:
+If we have 100 books and the one we're looking for is the last one, we’ll need to check 99 before finding it.
+
+Binary Search:
+Binary search is much faster, but it only works if the list is already sorted (e.g., books sorted by title).
+
+It works by repeatedly cutting the list in half.
+
+It checks the middle item first.
+
+If the title we're looking for comes before the middle one, it looks in the first half.
+
+Otherwise, it looks in the second half.
+
+This process continues until it finds the book or finishes searching.
+
+Example:
+Instead of checking 100 books one by one, binary search might only need about 7 steps to find the book —
+ much faster!
+
+4) Analysis of Search Algorithms
+Comparison of linear search and binary search in terms of performance (time complexity):
+
+Time Complexity
+Linear Search:
+
+Best case: O(1) (book is the first one)
+
+Worst case: O(n) (book is last or not present)
+
+Works on unsorted lists but is slow for large datasets
+
+Binary Search:
+
+Best case: O(1) (book is in the middle)
+
+Average/Worst case: O(log n)
+
+Works only if the list is sorted
+
+Much faster than linear search for large lists
+
+When to Use Which?
+Use linear search when:
+
+The list is small
+
+The list is not sorted
+
+We don’t need to optimize performance much
+
+Use binary search when:
+
+The list is large
+
+The list is sorted (or you’re willing to sort it once)
+
+You need fast search results

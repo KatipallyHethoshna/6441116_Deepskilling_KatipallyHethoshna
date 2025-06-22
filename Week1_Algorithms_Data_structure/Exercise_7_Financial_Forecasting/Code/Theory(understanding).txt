@@ -1,0 +1,52 @@
+1)Understand Recursive Algorithms
+Recursion is when a function calls itself to solve smaller versions of the same problem. Instead of using loops
+like for or while, recursion solves a big problem by breaking it down into smaller sub-problems, and then combining
+the results.
+
+Example:
+
+If we want to predict the value in year 5, we calculate year 5 based on year 4.
+
+To get year 4, we calculate year 3.
+
+And so on… until we reach the base case (usually year 0 or year 1), which is a known value.
+
+A recursive function always needs:
+
+A base case — when to stop the recursion.
+
+A recursive case — the part where the function calls itself.
+
+Example (Financial Forecast):
+If the value grows by 10% each year, and the starting value is ₹1000, we could calculate future values like this:
+
+Year 1 = Year 0 × 1.10
+
+Year 2 = Year 1 × 1.10
+...and so on, using recursion.
+
+
+4) Analysis of Recursive Algorithms
+Time Complexity
+Recursive algorithms can be efficient or slow, depending on how they are written.
+
+If the recursive function recalculates the same values many times, it becomes inefficient. For example, 
+in some problems, recursion without optimization leads to exponential time complexity (O(2ⁿ)).
+
+But in a simple financial forecast, where each year is calculated once from the previous one, the time complexity
+ is O(n) — one step per year.
+
+How to Optimize Recursion:
+Sometimes, recursion causes the same subproblem to be solved over and over. This is wasteful and leads to slow 
+performance.
+
+To avoid this, we can use:
+
+Memoization – Store results of previous calculations in memory, so we don’t repeat them.
+
+Convert to Iteration – Sometimes, it’s better to use a loop instead of recursion for better performance and to 
+avoid stack overflow.
+
+Tail Recursion – A special form of recursion that some languages optimize automatically (Java doesn’t do this fully, 
+but it helps to understand).
+

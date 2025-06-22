@@ -1,0 +1,55 @@
+1)Understand the problem
+ An Inventory Management System needs to efficiently store, retrieve, and update data for thousands of products.
+If you don’t use the right data structure, operations like searching for a product or updating quantity can become 
+very slow.
+
+Data Structures help organize and manage data. For example:
+
+We can store products in a list, map, or even a tree, depending on your needs.
+
+They determine how fast or slow operations like insert, search, and delete are.
+
+Algorithms are the steps or logic used to perform operations on the data.
+
+For example: When we search for a product by productId, the algorithm will check one by one (linear search)
+ or use keys (hashing) for fast lookup.
+
+Without good data structures and algorithms:
+
+Adding or deleting products could take a long time.
+
+The program may crash or become very slow with large data.
+
+Types of Data Structures Suitable for Inventory Management
+
+ArrayList	A dynamic array that can grow. Allows indexing by position.	Small to medium datasets where you
+access by index or loop through items.
+HashMap	Stores key-value pairs. Fast access by key.	Ideal for large datasets when you need to search by productId quickly.
+LinkedList	A list where each item points to the next. Easy to insert/delete in the middle.
+Not ideal for searching but good if you need to insert/remove frequently.
+TreeMap	A map that stores keys in sorted order.	If you need sorted inventory (e.g., by productId or name).
+
+Best choice : HashMap
+
+
+4) Analysis of Time Complexity
+Once the system is implemented using a data structure like a HashMap, it's important to understand how
+efficient each operation is.
+In a HashMap, the time complexity for operations such as adding, updating, deleting, or searching for 
+a product is typically O(1) — that is,they happen in constant time.
+This means that no matter how many products are in the system, these operations generally take the same 
+amount of time, thanks to the way hashing works.
+
+However, it's worth noting that this O(1) time is an average case scenario. 
+In rare cases, if many keys hash to the same value (a situation known as a collision), the time complexity could 
+degrade to O(n), where n is the number of elements in the map. Java handles this with good internal hashing 
+mechanisms, so such collisions are usually minimal.
+
+To further optimize performance, developers can minimize the risk of collisions by choosing good keys 
+(such as integers like product IDs instead of long or complex strings).
+If sorting is required — for example, to display products by their IDs or names — a TreeMap could be used instead, 
+which maintains elements in 
+sorted order but has a slightly higher time complexity of O(log n) for operations. 
+In extremely large systems, optimization strategies such as batching updates, caching frequently accessed data,
+or using a database for persistence might be necessary.
+

@@ -1,0 +1,63 @@
+ 1) Understand Array Representation
+
+An array is a basic data structure that stores a fixed-size collection of elements — all of the same type — 
+in contiguous memory locations. This means that all the elements are stored next to each other in memory.
+
+In programming (like Java), arrays are useful because they allow us to:
+
+Access elements quickly using an index (like arr[0], arr[1]).
+
+Store multiple records (e.g., employee data) in a simple and organized way.
+
+For example, if you have an array of Employee objects, each employee can be accessed by their index — 
+like employees[2] to get the third employee.
+
+Advantages of arrays:
+
+Fast access time: You can directly access any element using its index in constant time (O(1)).
+
+Simple to use and easy to implement.
+
+Good for storing a known number of elements.
+
+However, arrays also come with some limitations.
+
+4)Analysis
+the performance (time complexity) of each operation when using arrays for managing employee records:
+
+Add Employee:
+If you're adding at the end of the array and there’s space, it takes O(1) time (very fast).
+But if the array is full and needs to be resized, it may take O(n) time to create a new bigger array and 
+copy all elements.
+
+Search Employee:
+If you don’t know the index and have to search by name or ID, you need to check each element one by one — 
+this is called linear search, and it takes O(n) time in the worst case.
+
+Traverse Employees:
+Traversing just means going through all employees, maybe to display them. This takes O(n) time, where n is
+ the number of employees.
+
+Delete Employee:
+To delete, you usually search for the employee first (O(n)), and then shift the remaining elements one step
+ forward to fill the gap — this also takes O(n). So, deletion is also a bit slow in arrays.
+
+Now, let’s look at limitations of arrays:
+
+Arrays are fixed in size — you need to define the maximum number of employees at the beginning.
+
+Inserting or deleting in the middle of an array is slow because elements must be shifted.
+
+Wasted memory can happen if you create an array larger than needed.
+
+Despite these limitations, arrays are good when:
+
+You know the number of items in advance.
+
+You need fast access using indexes.
+
+You don’t do frequent insertions or deletions.
+
+For more flexibility (like dynamic resizing or easier deletion), 
+structures like ArrayList or LinkedList are often used instead of plain arrays.
+

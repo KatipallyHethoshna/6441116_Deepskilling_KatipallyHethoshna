@@ -1,0 +1,50 @@
+1)Understand Sorting Algorithms
+Sorting is the process of arranging data in a particular order — in this case, sorting customer orders by 
+total price, either from low to high or high to low. Sorting helps in identifying the most important
+ (e.g., high-value) orders first.
+
+There are many sorting algorithms in computer science. Here are four common ones:
+
+Bubble Sort
+Bubble Sort is the simplest sorting algorithm. It works by repeatedly comparing pairs of elements and swapping them
+if they are in the wrong order. This continues until the whole list is sorted.
+Example: If the first price is higher than the second, it swaps them. It does this over and over until no more 
+swaps are needed.
+It’s easy to understand but very slow for large lists.
+
+Insertion Sort
+Insertion Sort builds the final sorted list one item at a time. It takes each item and inserts it into the correct 
+position among the already sorted items.
+This is a bit faster than bubble sort for small lists, but still not great for big datasets.
+
+Quick Sort
+Quick Sort is a fast and efficient sorting algorithm. It works by choosing a pivot element and dividing the list
+into two parts: one with values less than the pivot, and the other with values greater than the pivot. 
+Then it recursively sorts each part.
+It’s much faster than Bubble or Insertion Sort for large datasets and is widely used in real-world applications.
+
+Merge Sort
+Merge Sort is a divide and conquer algorithm. It splits the list into halves, sorts each half, and then merges them
+back together.
+It’s also very efficient and provides consistent performance.
+
+Each algorithm has different strengths and weaknesses, but for this task, you'll implement Bubble Sort (for learning)
+and Quick Sort (for efficiency).
+
+4)Analysis of Bubble Sort vs Quick Sort
+
+Bubble Sort has a time complexity of O(n²), which means the time taken grows very quickly as the number of orders
+ increases. For example, if there are 10 orders, it may take up to 100 steps. If there are 1,000 orders,
+  it could take up to 1,000,000 steps. This is because Bubble Sort compares every pair of items multiple times.
+
+Quick Sort, on the other hand, has a time complexity of O(n log n) in the average and best cases. 
+That means it handles large amounts of data much more efficiently. For 1,000 items, it might only take around 
+10,000 steps instead of a million. Even in the worst case, it performs better than Bubble Sort in most practical 
+scenarios.
+
+Quick Sort is generally preferred over Bubble Sort
+Quick Sort uses a smart strategy of breaking the problem into smaller parts and solving them independently
+(recursion), which makes it much faster. Bubble Sort is simple to understand but very inefficient, and that’s why
+Quick Sort is the preferred choice in real-world applications like e-commerce platforms that deal with large numbers
+of customer orders.
+

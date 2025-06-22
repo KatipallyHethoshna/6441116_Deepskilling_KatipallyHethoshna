@@ -1,0 +1,43 @@
+1)	Understand Asymptotic Notation:
+When we talk about how fast or slow an algorithm is, especially when working with large amounts of data,we use
+asymptotic notation — and the most common one is Big O notation. Big O describes the time or space complexity of 
+an algorithm — that is, how the performance grows as the size of the input (like number of products) increases.
+
+For example:
+
+If a search algorithm has a time complexity of O(n), it means that the time it takes to search grows linearly 
+with the number of products. If there are 10 products, it checks up to 10; if there are 1,000, it may need to check
+up to 1,000.
+
+If a search algorithm is O(log n), it means the time increases much more slowly even as data grows — 
+this is what binary search offers. For 1,000 products, it may only take about 10 steps.
+
+We also consider best-case, average-case, and worst-case scenarios:
+
+Best case is when the desired product is found quickly — e.g., first in the list (O(1) for linear search).
+
+Average case is what usually happens in real-world situations (for linear search, about O(n/2), which simplifies
+to O(n)).
+
+Worst case is the slowest scenario — e.g., product not found or is last in the list (O(n) for linear search, 
+O(log n) for binary search).
+
+Big O notation helps developers decide which algorithms are efficient and which may slow down the application when 
+the number of products becomes large.
+
+4)Analysis
+
+There are two main types of search algorithms you're implementing here: linear search and binary search.
+
+In linear search, you go through each product one by one until you find a match or reach the end. 
+This works on unsorted data and is simple to code, but it's not very efficient for large datasets. 
+Its time complexity is O(n) — meaning if you have 1,000 products, it may take up to 1,000 checks in the worst case.
+
+In contrast, binary search is much faster but only works on sorted data. It repeatedly divides the search space in
+half, checking the middle element first. This means it eliminates half of the remaining data each time. 
+For example, if you have 1,000 products, it might only take about 10 steps to find the item. Its time complexity is 
+O(log n), which is much better for performance, especially as the number of products grows.
+
+Comparision: If your product list is unsorted and small, linear search is okay. But for large e-commerce platforms
+ with thousands of products, it’s best to sort the data and use binary search for much faster results. 
+ Sorting can be done once and reused multiple times, making the slight overhead worth i

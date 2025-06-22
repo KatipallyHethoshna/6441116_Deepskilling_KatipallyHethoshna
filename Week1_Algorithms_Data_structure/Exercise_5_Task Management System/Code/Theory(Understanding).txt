@@ -1,0 +1,67 @@
+1)Understand Linked Lists
+
+A linked list is a data structure used to store a sequence of elements (like tasks), where each element 
+(called a node) contains two things:
+
+The actual data (like taskId, taskName, and status).
+
+A reference (or link) to the next node in the list.
+
+There are different types of linked lists:
+
+Singly Linked List
+Each node stores data and a link to only the next node.
+
+The last node’s next link is null (it marks the end of the list).
+
+You can only move in one direction — from the first node (called the head) to the last.
+
+Doubly Linked List
+Each node has two links: one to the next node and one to the previous node.
+
+You can move in both directions — forward and backward.
+
+Uses more memory but gives more flexibility for certain operations like reverse traversal or easy deletion.
+
+In this exercise, we use a singly linked list because it's simpler and efficient for adding or removing tasks 
+when we mostly move forward through the list.
+
+4)Analysis of Time Complexity and Advantages
+
+Add Task
+If you're adding a task at the beginning, it takes O(1) time (very fast).
+
+If you're adding at the end, you need to traverse to the last node — this takes O(n) time.
+
+Search Task:
+You have to go through the list from the beginning until you find the task.
+
+This is linear search, so it takes O(n) time in the worst case.
+
+Traverse Tasks:
+Traversing means visiting each node one by one (e.g., printing tasks).
+
+This takes O(n) time.
+
+Delete Task:
+First, you search for the task (O(n)), then adjust the links to remove it — which takes O(1) after finding it.
+
+So overall, O(n) time for deletion.
+
+Advantages of Linked Lists over Arrays:
+Dynamic Size:
+Unlike arrays, you don’t need to define the size of a linked list ahead of time. You can grow or shrink it
+ easily as tasks are added or removed.
+
+Efficient Insertions/Deletions:
+In arrays, inserting or deleting requires shifting elements. In linked lists, you just change links — which is much 
+faster when you're working with large or frequently changing data.
+
+No Wasted Space:
+Arrays can waste memory if you overestimate size. Linked lists use memory only for the elements actually stored.
+
+No Resize Overhead:
+Arrays need to be copied and resized when full. Linked lists don’t require resizing.
+
+However, linked lists are slower at accessing individual elements by index (you have to start at the 
+beginning and move node by node),unlike arrays where you can jump to any index directly.
