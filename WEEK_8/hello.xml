@@ -1,3 +1,7 @@
 <root>
+<<<<<<< HEAD
 <message>Hello from master branch</message>
+=======
+<message>Updated content in GitWork branch</message>
+>>>>>>> GitWork
 </root>
